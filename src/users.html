@@ -20,6 +20,7 @@
     <!--</div>-->
   <!--</section>-->
   <input type="text" value.bind="newBeer.name" placeholder="Name">
+  <input type="text" value.bind="newBeer.ABV" placeholder="ABV">
     <input type="button" click.delegate="addBeer()" value="Add new"/>
   <ul>
     <li repeat.for="beer of beers">${beer.name} - ${beer.ABV}</li>

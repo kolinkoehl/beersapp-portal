@@ -4,8 +4,8 @@ import 'fetch';
 
 @inject(HttpClient, json)
 export class Users {
-  heading = 'Github Users';
-  users = [];
+
+  newBeer = {}
 
   constructor(http) {
     http.configure(config => {
@@ -14,13 +14,8 @@ export class Users {
         .withBaseUrl('http://localhost:3000/api/');
     });
 
-
-    this.newBeer = {};
     this.http = http;
-  }
-
-  activate() {
-  this.getBeers();
+    this.getBeers();
   }
 
   getBeers(){
